@@ -33,90 +33,52 @@ class SiderMenu extends Component {
         collapsible
         width={240}
       >
-        <div className="logo" />
+        <div className="logo">
+          Logo
+        </div>
         <Menu
-          style={{ marginTop: '63px' }}
           theme="dark"
           defaultSelectedKeys={[location.pathname]}
           defaultOpenKeys={section}
           mode="inline"
         >
-          <SubMenu
-            key="merchant"
-            title={(
-              <span>
-                <Icon type="shop" />
-                <span>Merchant</span>
-              </span>
-)}
-          >
-            <Menu.Item key="/cms/merchant/list">
-              <Link to="/cms/merchant/list">
-                <span>Merchant List</span>
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="/cms/merchant/create">
-              <Link to="/cms/merchant/create">
-                <span>Create New Merchant</span>
-              </Link>
-            </Menu.Item>
-          </SubMenu>
+          <Menu.Item key="/">
+            <Link to="/">
+              <Icon type="home" />
+              <span>Dashboard</span>
+            </Link>
+          </Menu.Item>
           <SubMenu
             key="user"
             title={(
               <span>
-                <Icon type="user" />
-                <span>User</span>
+                <Icon type="bars" />
+                <span>Menu</span>
               </span>
-)}
+            )}
           >
-            <Menu.Item key="/cms/user/list">
-              <Link to="/cms/user/list">
-                <span>User List</span>
+            <Menu.Item key="/menu/sub_menu/1">
+              <Link to="/menu/sub_menu/1">
+                <span>Sub Menu</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="/cms/user/create">
-              <Link to="/cms/user/create">
-                <span>Create New User</span>
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="/cms/user/log">
-              <Link to="/cms/user/log">
-                <span>User Log</span>
-              </Link>
-            </Menu.Item>
-          </SubMenu>
-          <SubMenu
-            key="role"
-            title={(
-              <span>
-                <Icon type="key" />
-                <span>Role</span>
-              </span>
-)}
-          >
-            <Menu.Item key="/cms/role/list">
-              <Link to="/cms/role/list">
-                <span>Role List</span>
-              </Link>
-            </Menu.Item>
-            <Menu.Item key="/cms/role/create">
-              <Link to="/cms/role/create">
-                <span>Create New Role</span>
+            <Menu.Item key="/menu/sub_menu/2">
+              <Link to="/menu/sub_menu/2">
+                <span>Sub Menu</span>
               </Link>
             </Menu.Item>
             <SubMenu
-              key="permission"
-              title={<span><span>Permission</span></span>}
+              key="/menu/sub_menu/sub_menu/3"
+              title={<span><span>Sub Menu</span></span>}
             >
-              <Menu.Item key="/cms/role/permission/list">
-                <Link to="/cms/role/permission/list">
-                  <span>Permission List</span>
+              <Menu.Item key="/menu/sub_menu/3">
+                <Link to="/menu/sub_menu/3">
+                  <span>Sub Menu</span>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="/cms/role/permission/create">
-                <Link to="/cms/role/permission/create">
-                  <span>Create New Permission</span>
+              <Menu.Item key="/menu/sub_menu/4">
+                <Link to="/menu/sub_menu/4">
+                  <span>Sub Menu</span>
                 </Link>
               </Menu.Item>
             </SubMenu>
